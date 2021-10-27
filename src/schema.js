@@ -31,7 +31,9 @@ type Track{
     "This is the image url for the Track"
     thumbnail: String
     "Length of the Track in minutes"
-    length: Int
+    length: Int @deprecated(reason: "Use durationInSeconds")
+    "Track's full duration in seconds"
+    durationInSeconds: Int
     modulesCount: Int
     "The track's complete description, can be in Markdown format"
     description: String
@@ -53,7 +55,9 @@ type Module {
     "The module's title"
     title: String!
     "The module's length in minutes"
-    length: Int
+    length: Int @deprecated(reason: "Use durationInSeconds")
+    "Module's full duration in seconds"
+    durationInSeconds: Int
     "The module's text-based description, can be in markdown format. In case of a video, it will be the enriched transcript"
     content: String
     "The module's video url, for video-based modules"
