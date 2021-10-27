@@ -1,6 +1,6 @@
 const { ApolloServer } = require('apollo-server');
 const typeDefs = require('./schema');
-const resolvers = require('../resolvers');
+const resolvers = require('./resolvers');
 const TrackAPI = require('../datasources/track-api');
 
 async function startApolloServer(typeDefs, resolvers) {
